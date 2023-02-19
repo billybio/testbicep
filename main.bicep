@@ -6,10 +6,16 @@ resource storageaccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
 
 name: storename
 sku: {
-  name:'Standard_LRS' 
+  name:'Standard_LRS'
+     
 }
-kind: 'BlobStorage'
-location: 'westeurope'
+kind: 'BlobStorage' 
+location: location
+properties: {
+
+  accessTier: 'Hot'
+}
+
 
 
 }
